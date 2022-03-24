@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "TestExample/1.0.0": {
         "dependencies": {
-          "ConcurrentProgramming2": "1.0.0",
+          "ConcurrentProgramming": "1.0.0",
           "MSTest.TestAdapter": "2.2.7",
           "MSTest.TestFramework": "2.2.7",
           "Microsoft.NET.Test.Sdk": "16.11.0",
@@ -1077,9 +1077,9 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "ConcurrentProgramming2/1.0.0": {
+      "ConcurrentProgramming/1.0.0": {
         "runtime": {
-          "ConcurrentProgramming2.dll": {}
+          "ConcurrentProgramming.dll": {}
         }
       }
     }
@@ -1706,7 +1706,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "ConcurrentProgramming2/1.0.0": {
+    "ConcurrentProgramming/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

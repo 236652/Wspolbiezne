@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConcurrentProgramming2\ConcurrentProgramming2.csproj" />
+    <ProjectReference Include="..\ConcurrentProgramming\ConcurrentProgramming.csproj" />
   </ItemGroup>
 
 </Project>

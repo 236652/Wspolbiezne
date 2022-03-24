@@ -1661,14 +1661,14 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "ConcurrentProgramming2/1.0.0": {
+      "ConcurrentProgramming/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/ConcurrentProgramming2.dll": {}
+          "bin/placeholder/ConcurrentProgramming.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ConcurrentProgramming2.dll": {}
+          "bin/placeholder/ConcurrentProgramming.dll": {}
         }
       }
     }
@@ -6204,15 +6204,15 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "ConcurrentProgramming2/1.0.0": {
+    "ConcurrentProgramming/1.0.0": {
       "type": "project",
-      "path": "../ConcurrentProgramming2/ConcurrentProgramming2.csproj",
-      "msbuildProject": "../ConcurrentProgramming2/ConcurrentProgramming2.csproj"
+      "path": "../ConcurrentProgramming/ConcurrentProgramming.csproj",
+      "msbuildProject": "../ConcurrentProgramming/ConcurrentProgramming.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ConcurrentProgramming2 >= 1.0.0",
+      "ConcurrentProgramming >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.7",
       "MSTest.TestFramework >= 2.2.7",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
@@ -6226,11 +6226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming2\\TestExample\\TestExample.csproj",
+      "projectUniqueName": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming\\TestExample\\TestExample.csproj",
       "projectName": "TestExample",
-      "projectPath": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming2\\TestExample\\TestExample.csproj",
+      "projectPath": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming\\TestExample\\TestExample.csproj",
       "packagesPath": "C:\\Users\\piotr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming2\\TestExample\\obj\\",
+      "outputPath": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming\\TestExample\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6251,8 +6251,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming2\\ConcurrentProgramming2\\ConcurrentProgramming2.csproj": {
-              "projectPath": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming2\\ConcurrentProgramming2\\ConcurrentProgramming2.csproj"
+            "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming\\ConcurrentProgramming\\ConcurrentProgramming.csproj": {
+              "projectPath": "C:\\Users\\piotr\\OneDrive\\Pulpit\\Studia\\Semestr 4\\Programowanie Współbieżne\\Wspolbiezne\\ConcurrentProgramming\\ConcurrentProgramming\\ConcurrentProgramming.csproj"
             }
           }
         }
