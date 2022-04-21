@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentProgramming", "ConcurrentProgramming\ConcurrentProgramming.csproj", "{4D79B89B-EFA4-4C2A-8F87-48D4EA7F8D6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logika", "Logika\Logika.csproj", "{11B311FB-80A8-45A3-B95D-D6EAE6EF645F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExample", "TestExample\TestExample.csproj", "{A665A85C-C36E-4ACC-9887-300F046E5519}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Widok", "Widok\Widok.csproj", "{06D15636-3228-402B-BDC1-C7A5A9F42AB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{E47208A9-5FD0-4EAE-978D-BECFEC6DEB5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dane", "Dane\Dane.csproj", "{381543F3-6069-4B8D-96BF-C2FD9D892D65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WidokModel", "WidokModel\WidokModel.csproj", "{79F77307-FC9C-49B1-ABC1-8990265D48FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D79B89B-EFA4-4C2A-8F87-48D4EA7F8D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D79B89B-EFA4-4C2A-8F87-48D4EA7F8D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D79B89B-EFA4-4C2A-8F87-48D4EA7F8D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D79B89B-EFA4-4C2A-8F87-48D4EA7F8D6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A665A85C-C36E-4ACC-9887-300F046E5519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A665A85C-C36E-4ACC-9887-300F046E5519}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A665A85C-C36E-4ACC-9887-300F046E5519}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A665A85C-C36E-4ACC-9887-300F046E5519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B311FB-80A8-45A3-B95D-D6EAE6EF645F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B311FB-80A8-45A3-B95D-D6EAE6EF645F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B311FB-80A8-45A3-B95D-D6EAE6EF645F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B311FB-80A8-45A3-B95D-D6EAE6EF645F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D15636-3228-402B-BDC1-C7A5A9F42AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D15636-3228-402B-BDC1-C7A5A9F42AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D15636-3228-402B-BDC1-C7A5A9F42AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D15636-3228-402B-BDC1-C7A5A9F42AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E47208A9-5FD0-4EAE-978D-BECFEC6DEB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47208A9-5FD0-4EAE-978D-BECFEC6DEB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47208A9-5FD0-4EAE-978D-BECFEC6DEB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47208A9-5FD0-4EAE-978D-BECFEC6DEB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381543F3-6069-4B8D-96BF-C2FD9D892D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381543F3-6069-4B8D-96BF-C2FD9D892D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381543F3-6069-4B8D-96BF-C2FD9D892D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381543F3-6069-4B8D-96BF-C2FD9D892D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F77307-FC9C-49B1-ABC1-8990265D48FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F77307-FC9C-49B1-ABC1-8990265D48FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F77307-FC9C-49B1-ABC1-8990265D48FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F77307-FC9C-49B1-ABC1-8990265D48FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

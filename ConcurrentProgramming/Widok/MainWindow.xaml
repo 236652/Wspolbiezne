@@ -1,0 +1,55 @@
+﻿<Window x:Class="Widok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WidokModel;assembly=WidokModel"
+        mc:Ignorable="d"
+        Title="Programowanie wspolbierzne" 
+        MaxHeight="280" MaxWidth="415" 
+        MinHeight="280" MinWidth="415">
+    <Window.DataContext>
+        <vm:WidokModel />
+    </Window.DataContext>
+    <Grid>
+        <Button x:Name="Button1" 
+                Content="Start" 
+                Height="20" 
+                Width="60" 
+                Margin="10,10,330,204"
+                Command="{Binding Start}"/>
+        <Button x:Name="Button2"
+                Content="Stop"
+                Height="20"
+                Width="60"
+                Margin="10,35,330,179"
+                Command="{Binding Stop}"/>
+        <TextBox x:Name="LiczbaKulek"
+                 Text="0"
+                 Height="20"
+                 Width="60" 
+                 Margin="10,107,330,107"/>
+        <Label Content="Ile kulek?" 
+               Height="40"
+               Width="60" 
+               Margin="10,87,330,107"/>
+        <ItemsControl ItemsSource="{Binding Kule}" Margin="0,0,0,0">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas Width="320" Height="230" Margin="75,2,5,2"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+                    <Setter Property="Canvas.Left" Value="{Binding Left}"/>
+                    <Setter Property="Canvas.Top" Value="{Binding Top}"/>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Ellipse Height="{Binding Height}" Width="{Binding Width}" Fill="Blue"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Window>
