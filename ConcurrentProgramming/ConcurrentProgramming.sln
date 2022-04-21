@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dane", "Dane\Dane.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WidokModel", "WidokModel\WidokModel.csproj", "{79F77307-FC9C-49B1-ABC1-8990265D48FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "ModelTest\Test.csproj", "{2A01716A-034C-4338-8541-279A51901A6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{79F77307-FC9C-49B1-ABC1-8990265D48FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79F77307-FC9C-49B1-ABC1-8990265D48FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79F77307-FC9C-49B1-ABC1-8990265D48FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A01716A-034C-4338-8541-279A51901A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A01716A-034C-4338-8541-279A51901A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A01716A-034C-4338-8541-279A51901A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A01716A-034C-4338-8541-279A51901A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
