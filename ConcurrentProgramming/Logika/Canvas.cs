@@ -11,6 +11,7 @@ namespace Logika
         private int height;
         private int width;
         private List<Kulka> kulki = new List<Kulka> ();
+        private Boolean isOn;
 
         public int getWidth()
         {
@@ -43,7 +44,7 @@ namespace Logika
             this.height = height;
         }
 
-        /*public Boolean getOn()
+        public Boolean getOn()
         {
             return this.isOn;
         }
@@ -51,7 +52,7 @@ namespace Logika
         public void setOn(Boolean isOn)
         {
             this.isOn = isOn;
-        }*/
+        }
 
         public void stwozKulki(int ilosc)
         {
@@ -61,28 +62,6 @@ namespace Logika
                 int left = random.Next(25, width - 25);
                 int top = random.Next(25, height - 25);
                 kulki.Add(new Kulka(25, 25, left, top));
-            }
-        }
-
-        public void ruszKulkami()
-        {
-            Random random = new Random();
-            foreach (Kulka kulka in kulki)
-            {
-                int x = 0;
-                int y = 0;
-                while (x == 0 && y == 0)
-                {
-                    x = random.Next(-1, 1);
-                    y = random.Next(-1, 1);
-
-                    if (kulka.Left + y < 25 || kulka.Left + y > width - 25 || kulka.Top + x < 25 || kulka.Top + x > width - 25)
-                    {
-                        x = 0;
-                    }
-                }
-                kulka.Left = kulka.Left + y;
-                kulka.Top = kulka.Top + x;
             }
         }
     }

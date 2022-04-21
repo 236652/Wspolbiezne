@@ -11,11 +11,12 @@ namespace WidokModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private ModelAbstractApi newModel;
-        private ObservableCollection<Kula> kule;
+        private ObservableCollection<Kula> kule = new ObservableCollection<Kula>();
         private int height;
         private int width;
         private int left;
         private int top;
+        private int liczbaKul;
         public ICommand Start { get; set;}
         public ICommand Stop { get; set;}
 
@@ -31,10 +32,13 @@ namespace WidokModel
             Stop = new RelayCommand(() => stop());
             this.Width = 25;
             this.Height = 25;
-            this.Top = 160;
-            this.Left = 90;
         }
 
+        public int LiczbaKul
+        {
+            get { return this.liczbaKul; }
+            set { this.liczbaKul = value; RaisePropertyChanged("LiczbaKul"); }
+        }
 
         public int Height
         {
@@ -62,25 +66,20 @@ namespace WidokModel
 
         public void start()
         {
-            newModel.start(320, 230, 4);
-            this.kule = newModel.getKula();
-            foreach (Kula k in this.kule)
-            {
-                this.Left = k.Left;
-                this.Top = k.Top;
-            }
+            newModel.getKula().Clear();
+            newModel.start(320, 230, LiczbaKul);
+            this.Kule = newModel.getKula();
         }
 
         public void stop()
-        {
-            newModel.getKula().Clear();
+        { 
             newModel.stop();
         }
         public ObservableCollection<Kula> Kule
         {
             get { return kule; }
             set { kule = value;
-                //RaisePropertyChanged("Kule");
+                RaisePropertyChanged("Kule");
             }
         }
     }

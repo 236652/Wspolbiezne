@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:WidokModel;assembly=WidokModel"
         mc:Ignorable="d"
-        Title="Programowanie wspolbierzne" 
+        Title="Programowanie wspolbiezne" 
         MaxHeight="280" MaxWidth="415" 
         MinHeight="280" MinWidth="415">
     <Window.DataContext>
@@ -25,18 +25,18 @@
                 Margin="10,35,330,179"
                 Command="{Binding Stop}"/>
         <TextBox x:Name="LiczbaKulek"
-                 Text="0"
+                 Text="{Binding Path=LiczbaKul, UpdateSourceTrigger=PropertyChanged}"
                  Height="20"
                  Width="60" 
-                 Margin="10,107,330,107"/>
+                 TextWrapping="Wrap"
+                 Margin="10,107,330,107"
+                 />
         <Label Content="Ile kulek?" 
-               Height="40"
-               Width="60" 
-               Margin="10,87,330,107"/>
+               Margin="0,75,347,145" RenderTransformOrigin="0.392,-1.058"/>
         <ItemsControl ItemsSource="{Binding Kule}" Margin="0,0,0,0">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <Canvas Width="320" Height="230" Margin="75,2,5,2"/>
+                    <Canvas Width="320" Height="230" Margin="75,2,5,2" Background="Black"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemContainerStyle>

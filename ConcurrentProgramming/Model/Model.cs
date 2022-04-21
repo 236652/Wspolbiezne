@@ -33,7 +33,6 @@ namespace Model
 
             public override void start(int width, int height, int ilosc)
             {
-                warstwaLogiki.Stop();
                 kule.Clear();
                 warstwaLogiki.stwozCanvas(width, height, ilosc);
                 warstwaLogiki.ruszKulkami();
@@ -42,14 +41,11 @@ namespace Model
                 {
                     kule.Add(new Kula(k));
                 }
-
-                warstwaLogiki.Start();
             }
 
             public override void stop()
             {
                 warstwaLogiki.Stop();
-                kule.Clear();
             }
         }
     }

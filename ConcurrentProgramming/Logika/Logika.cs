@@ -11,8 +11,6 @@ namespace Logika
         public abstract void stwozCanvas(int width, int height, int ilosc);
         public abstract void ruszKulkami();
 
-        public abstract void Start();
-
         public abstract void Stop();
 
         public abstract Canvas getCanvas();
@@ -22,7 +20,6 @@ namespace Logika
             private DaneAbstractApi daneApi;
             private Canvas canvas;
             private List<Thread> watki;
-            private Boolean isOn;
 
             public LogikaApi(DaneAbstractApi daneAbstractApi = null)
             {
@@ -43,35 +40,45 @@ namespace Logika
             public override void ruszKulkami()
             {
                 watki = new List<Thread>();
+                this.canvas.setOn(true);
                 foreach (Kulka kulka in this.canvas.getKulki())
                 {
                     Thread t = new Thread(() =>
                     {
-                        while (isOn)
+                        while (this.canvas.getOn())
                         {
-                            this.canvas.ruszKulkami();
+                            Random r = new Random();
+                            int x = kulka.Left + r.Next(-9, 10);
+                            int y = kulka.Top + r.Next(-9, 10);
+
+                            while (true)
+                            {
+                                if (x > (0 + 25) && x < (this.canvas.getWidth() - 25))
+                                {
+                                    break;
+                                }
+                                x = kulka.Left + r.Next(-9, 10);
+                            }
+                            while (true)
+                            {
+                                if (y > (0 + 25) && y < (this.canvas.getHeight() - 25))
+                                {
+                                    break;
+                                }
+                                y = kulka.Top + r.Next(-9, 10);
+                            }
+                            kulka.Left = x;
+                            kulka.Top = y; 
                             Thread.Sleep(5);
                         }
                     });
-                    this.watki.Add(t);
-                }
-            }
-
-            public override void Start()
-            {
-                if (!isOn)
-                {
-                    isOn = true;
-                    foreach (Thread t in watki)
-                    {
-                        t.Start();
-                    }
+                    t.Start();
                 }
             }
 
             public override void Stop()
             {
-                isOn = false;
+                this.canvas.setOn(false);
             }
         }
     }
