@@ -47,28 +47,7 @@ namespace Logika
                     {
                         while (this.canvas.getOn())
                         {
-                            Random r = new Random();
-                            int x = kulka.Left + r.Next(-9, 10);
-                            int y = kulka.Top + r.Next(-9, 10);
-
-                            while (true)
-                            {
-                                if (x > (0 + 25) && x < (this.canvas.getWidth() - 25))
-                                {
-                                    break;
-                                }
-                                x = kulka.Left + r.Next(-9, 10);
-                            }
-                            while (true)
-                            {
-                                if (y > (0 + 25) && y < (this.canvas.getHeight() - 25))
-                                {
-                                    break;
-                                }
-                                y = kulka.Top + r.Next(-9, 10);
-                            }
-                            kulka.Left = x;
-                            kulka.Top = y; 
+                            kulka.ruszKulkami(this.canvas.getWidth(), this.canvas.getHeight());
                             Thread.Sleep(5);
                         }
                     });
