@@ -1,17 +1,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Model;
+using Dane;
 using Logika;
 
 namespace ModelTest
 {
-    /*[TestClass]
+    [TestClass]
     public class ModelTest
     {
         [TestMethod]
         public void KulaTest()
         {
-            RuchKulka kulkaTest = new Kulka(1, 2, 3, 4);
-            Kula kulaTest = new Kula(kulkaTest);
+            Kulka kulkaTest = new Kulka(1, 2, 3, 4);
+            KulkaMerge kulkaMergeTest = new KulkaMerge(kulkaTest);
+            Kula kulaTest = new Kula(kulkaMergeTest);
             Assert.AreEqual(kulaTest.Width, kulkaTest.Width);
             Assert.AreEqual(kulaTest.Height, kulkaTest.Height);
             Assert.AreEqual(kulaTest.Left, kulkaTest.Left);
@@ -27,7 +29,7 @@ namespace ModelTest
         }
 
         [TestMethod]
-        public void ModelTest()
+        public void ModelT()
         {
             ModelAbstractApi modelTest = ModelAbstractApi.CreateApi();
             modelTest.start(1000, 1000, 1);
@@ -48,8 +50,6 @@ namespace ModelTest
             Assert.AreEqual(canvasTest.getWidth(), 1000);
             canvasTest.stwozKulki(2);
             Assert.AreEqual(canvasTest.getKulki().Count, 2);
-            canvasTest.setOn(true);
-            Assert.AreEqual(canvasTest.getOn(), true);
             canvasTest.setHeight(100);
             canvasTest.setWidth(100);
             Assert.AreEqual(canvasTest.getHeight(), 100);
@@ -57,9 +57,37 @@ namespace ModelTest
         }
 
         [TestMethod]
+        public void LogikaAbstractApiTest()
+        {
+            LogikaAbstractApi logikaTest = LogikaAbstractApi.createApi();
+            logikaTest.stwozCanvas(1000, 1000, 1);
+            Assert.AreEqual(logikaTest.getCanvas().getHeight(), 1000);
+            Assert.AreEqual(logikaTest.getCanvas().getWidth(), 1000);
+            Assert.AreEqual(logikaTest.getCanvas().getKulki().Count, 1);
+            int x = logikaTest.getCanvas().getKulki()[0].Left;
+            Assert.AreEqual(x, logikaTest.getCanvas().getKulki()[0].Left);
+        }
+    }
+
+    [TestClass]
+    public class DaneTest
+    {
+        [TestMethod]
+        public void CanvasTest()
+        {
+            Canvas canvasTest = new Canvas(200, 200);
+            Kulka kulkaTest1 = new Kulka(25, 25, 30, 30);
+            canvasTest.getKulki().Add(kulkaTest1);
+            Assert.AreEqual(canvasTest.moznaStwozyc(31, 32), false);
+            Canvas canvasTest1 = new Canvas(300, 300);
+            canvasTest1.stwozKulki(2);
+            Assert.AreEqual(canvasTest1.getKulki().Count, 2);
+        }
+
+        [TestMethod]
         public void KulkaTest()
         {
-            RuchKulka kulka = new Kulka(25, 25, 25, 25);
+            Kulka kulka = new Kulka(25, 25, 25, 25);
             Assert.AreEqual(kulka.Height, 25);
             Assert.AreEqual(kulka.Width, 25);
             Assert.AreEqual(kulka.Left, 25);
@@ -75,18 +103,12 @@ namespace ModelTest
         }
 
         [TestMethod]
-        public void LogikaAbstractApiTest()
+        public void daneTest()
         {
-            LogikaAbstractApi logikaTest = LogikaAbstractApi.createApi();
-            logikaTest.stwozCanvas(1000, 1000, 1);
-            Assert.AreEqual(logikaTest.getCanvas().getHeight(), 1000);
-            Assert.AreEqual(logikaTest.getCanvas().getWidth(), 1000);
-            Assert.AreEqual(logikaTest.getCanvas().getKulki().Count, 1);
-            logikaTest.getCanvas().setOn(true);
-            logikaTest.Stop();
-            Assert.AreEqual(logikaTest.getCanvas().getOn(), false);
-            int x = logikaTest.getCanvas().getKulki()[0].Left;
-            Assert.AreEqual(x, logikaTest.getCanvas().getKulki()[0].Left);
+            DaneAbstractApi daneTest = DaneAbstractApi.createApi();
+            daneTest.stwozCanvas(200, 200, 2);
+            Assert.IsNotNull(daneTest);
+            Assert.AreEqual(daneTest.getCanvas().getKulki().Count, 2);
         }
-    }*/
+    }
 }

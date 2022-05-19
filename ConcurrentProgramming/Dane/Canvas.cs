@@ -50,8 +50,29 @@ namespace Dane
             {
                 int left = random.Next(25, width - 25);
                 int top = random.Next(25, height - 25);
+                while (!moznaStwozyc(left, top))
+                {
+                    left = random.Next(25, width - 25);
+                    top = random.Next(25, height - 25);
+                }
                 kulki.Add(new Kulka(25, 25, left, top));
             }
+        }
+        
+        public bool moznaStwozyc(int left, int top)
+        {
+            foreach(Kulka kulka in this.kulki)
+            {
+                bool left1 = (left <= (kulka.Left + 50));
+                bool left2 = (left >= (kulka.Left - 50));
+                bool top1 = (top <= (kulka.Top + 50));
+                bool top2 = (top >= (kulka.Top - 50));
+                if ((left1 && left2) && (top1 && top2))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
