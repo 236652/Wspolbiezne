@@ -1,4 +1,5 @@
 ﻿using Logika;
+using Dane;
 using System.Collections.ObjectModel;
 
 namespace Model
@@ -35,9 +36,9 @@ namespace Model
             {
                 kule.Clear();
                 warstwaLogiki.stwozCanvas(width, height, ilosc);
-                warstwaLogiki.ruszKulkami();
+                warstwaLogiki.Start();
 
-                foreach (Kulka k in warstwaLogiki.getCanvas().getKulki())
+                foreach (KulkaMerge k in warstwaLogiki.getKulkiMerges())
                 {
                     kule.Add(new Kula(k));
                 }
@@ -45,6 +46,7 @@ namespace Model
 
             public override void stop()
             {
+                kule.Clear();
                 warstwaLogiki.Stop();
             }
         }

@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logika
+namespace Dane
 {
     public class Canvas
     {
         private int height;
         private int width;
-        private List<Kulka> kulki = new List<Kulka> ();
-        private Boolean isOn;
+        private List<Kulka> kulki = new List<Kulka>();
 
         public int getWidth()
         {
@@ -37,21 +36,11 @@ namespace Logika
         {
             return kulki;
         }
-        
+
         public Canvas(int width, int height)
         {
             this.width = width;
             this.height = height;
-        }
-
-        public Boolean getOn()
-        {
-            return this.isOn;
-        }
-
-        public void setOn(Boolean isOn)
-        {
-            this.isOn = isOn;
         }
 
         public void stwozKulki(int ilosc)

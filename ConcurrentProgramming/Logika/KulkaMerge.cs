@@ -1,11 +1,11 @@
 ﻿using System;
-using Logika;
+using Dane;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Model
+namespace Logika
 {
-    public class Kula : INotifyPropertyChanged
+    public class KulkaMerge
     {
         private int width;
         private int height;
@@ -13,6 +13,7 @@ namespace Model
         private int top;
         private int krokX;
         private int krokY;
+        private Kulka kulka;
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
@@ -20,23 +21,25 @@ namespace Model
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public Kula(KulkaMerge kulkaMerge)
+        public KulkaMerge(Kulka kulka)
         {
-            this.Left = kulkaMerge.Left;
-            this.Top = kulkaMerge.Top;
-            this.Width = kulkaMerge.Width;
-            this.Height = kulkaMerge.Height;
-            this.krokX = kulkaMerge.KrokX;
-            this.krokY = kulkaMerge.KrokY; 
-            kulkaMerge.PropertyChanged += OnPropertyChanged;
+            this.kulka = kulka;
+            this.krokX = kulka.KrokX;
+            this.krokY = kulka.KrokY;
+            this.Left = kulka.Left; 
+            this.Top = kulka.Top;
+            this.Width = kulka.Width;
+            this.Height = kulka.Height;
+          
+            kulka.PropertyChanged += OnPropertyChanged;
         }
-
-        
 
         public int Left
         {
             get { return this.left; }
-            set { this.left = value;
+            set
+            {
+                this.left = value;
                 RaisePropertyChanged("Left");
             }
         }
@@ -44,7 +47,9 @@ namespace Model
         public int Top
         {
             get { return this.top; }
-            set { this.top = value;
+            set
+            {
+                this.top = value;
                 RaisePropertyChanged("Top");
             }
         }
@@ -64,7 +69,7 @@ namespace Model
             get { return this.height; }
             set
             {
-                this.height=value;
+                this.height = value;
                 RaisePropertyChanged("Height");
             }
         }
@@ -89,9 +94,16 @@ namespace Model
             }
         }
 
+        public void Move()
+        {
+            this.Top += this.KrokX;
+            this.Left += this.KrokY;
+            RaisePropertyChanged("zmiana");
+        }
+
         private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            KulkaMerge k = (KulkaMerge)sender;
+            Kulka k = (Kulka)sender;
 
             switch (e.PropertyName)
             {
