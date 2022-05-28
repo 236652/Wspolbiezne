@@ -45,6 +45,7 @@ namespace Dane
 
         public void stwozKulki(int ilosc)
         {
+            int id = 0;
             Random random = new Random();
             for (int j = 0; j < ilosc; j++)
             {
@@ -55,7 +56,10 @@ namespace Dane
                     left = random.Next(25, width - 25);
                     top = random.Next(25, height - 25);
                 }
-                kulki.Add(new Kulka(25, 25, left, top));
+                Kulka k = new Kulka(25, 25, left, top);
+                k.ID = id;
+                kulki.Add(k);
+                id++;
             }
         }
         

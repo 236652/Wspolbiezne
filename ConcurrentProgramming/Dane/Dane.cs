@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Text.Json;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace Dane
 {
@@ -25,6 +28,7 @@ namespace Dane
         private bool isActive = false;
         private object zamek = new object();
         private List<Thread> threads = new List<Thread>();
+        private Logger logger = new Logger();
 
         public bool IsActive 
         {
@@ -46,9 +50,12 @@ namespace Dane
                 {
                     while (isActive)
                     {
+                        //kulka.Move();
                         lock (zamek)
                         {
                             kulka.Move();
+                            kulka.Zmiana();
+                            logger.WriteLog(JsonSerializer.Serialize(kulka));
                         }
                         Thread.Sleep(5);
                     }
@@ -83,6 +90,5 @@ namespace Dane
         {
             return this.canvas;
         }
-
     }
 }

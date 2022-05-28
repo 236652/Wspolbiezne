@@ -8,6 +8,7 @@ namespace Dane
     {
         private int width;
         private int height;
+        private int id;
         private int left;
         private int top;
         private int mass = 1;
@@ -20,9 +21,19 @@ namespace Dane
         {
             this.Left += this.KrokX;
             this.Top += this.KrokY;
-            RaisePropertyChanged("zmiana");
         }
 
+        public int ID
+        {
+           get { return id; }
+           set { id = value; }
+        }
+
+
+        public void Zmiana()
+        {
+            RaisePropertyChanged("zmiana");
+        }
 
         public Kulka(int width, int height, int left, int top)
         {

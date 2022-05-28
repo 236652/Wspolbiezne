@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dane", "Dane\Dane.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WidokModel", "WidokModel\WidokModel.csproj", "{79F77307-FC9C-49B1-ABC1-8990265D48FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "ModelTest\Test.csproj", "{2A01716A-034C-4338-8541-279A51901A6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "ModelTest\Test.csproj", "{2A01716A-034C-4338-8541-279A51901A6C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A16DA690-653F-4263-97CE-EB932F734082}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
