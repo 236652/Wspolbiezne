@@ -55,7 +55,6 @@ namespace Dane
                         {
                             kulka.Move();
                             kulka.Zmiana();
-                            logger.WriteLog(JsonSerializer.Serialize(kulka));
                         }
                         Thread.Sleep(5);
                     }
@@ -73,11 +72,13 @@ namespace Dane
             {
                 t.Start();
             }
+            logger.StartLog(this.canvas.getKulki());
         }
 
         public override void Stop()
         {
             isActive = false;
+            logger.StopLog();
         }
 
         public override void stwozCanvas(int width, int height, int ilosc)
